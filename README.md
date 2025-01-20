@@ -1,6 +1,6 @@
 # On-demand self-hosted AWS EC2 runner for GitHub Actions
 
-⚠️ If you like the project, please consider [supporting Ukraine](https://bit.ly/3KeY7dc) in a [war](https://en.wikipedia.org/wiki/2022_Russian_invasion_of_Ukraine) against russian occupants. Any help would be much appreciated!
+⚠️ If you like the project, please consider [supporting Ukraine](https://prytulafoundation.org/en) in a [war](https://en.wikipedia.org/wiki/Russian_invasion_of_Ukraine) against russian occupants. Any help would be much appreciated!
 
 [<img src="https://user-images.githubusercontent.com/2857712/156607570-8c9fd15b-8b44-41b3-bec3-312267af324f.png" width="500">](https://supportukrainenow.org)
 
@@ -242,7 +242,7 @@ jobs:
       ec2-instance-id: ${{ steps.start-ec2-runner.outputs.ec2-instance-id }}
     steps:
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
